@@ -8,7 +8,8 @@
   <link rel="icon" href="../img/brand_hello_kitty_icon_158867.png" type="image/png">
   <link rel="stylesheet" href="../css/login.css"> <!-- Importação do arquivo CSS externo -->
   <link rel="stylesheet" href="../style.css">
-  <script src="../js/login.js"></script>   <!-- Importação do arquivo JavaScript -->
+  <script src="../js/cadastro.js"></script>   <!-- Importação do arquivo JavaScript -->
+  <script src="../js/login.js"></script> 
   <script src="https://kit.fontawesome.com/cf6fa412bd.js" crossorigin="anonymous"></script> <!-- Importação do kit de ícones Font Awesome -->
 </head>
 <body>
@@ -38,14 +39,14 @@
     </div>
 
     <form id="signin"> <!-- Formulário de login -->
-      <input type="text" placeholder="Email" required /> <!-- Campo de entrada para o email -->
-      <input type="password" placeholder="Senha" required /> <!-- Campo de entrada para a senha -->
+      <input type="text" id="email1" placeholder="Email" required /> <!-- Campo de entrada para o email -->
+      <input type="password" id="password1" placeholder="Senha" required /> <!-- Campo de entrada para a senha -->
       <div class="divCheck"> <!-- Div para a caixa de seleção "Lembre minha senha" -->
         <input type="checkbox" /> <!-- Caixa de seleção -->
         <span>Lembre minha senha</span> <!-- Texto associado à caixa de seleção -->
       </div>
       <!--Transformar em onclick para que não tenha que usar o <A> de link e ficar q linha azul abaixo-->
-        <button type="submit" onclick="window.location.href='../index.html'">Entrar</button>
+        <input type="button" onclick="LoginUsuario()" value="Logar"> <!-- Botão de envio do formulário de login -->
     </form>
 
 
