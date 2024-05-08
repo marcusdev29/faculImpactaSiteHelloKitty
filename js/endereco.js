@@ -6,6 +6,8 @@ async function enderecoUsuario() {
     var number = document.getElementById('number').value;
     var complement = document.getElementById('complement').value;
 
+    let user  = localStorage.getItem('user');
+    let token  =  JSON.parse(user).access_token;
 
         let resposta = await fetch(url,{
             method: "POST",
@@ -17,7 +19,8 @@ async function enderecoUsuario() {
                 "complement": complement,  
             }),
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': "Bearer "+token
             }        
         });
 
