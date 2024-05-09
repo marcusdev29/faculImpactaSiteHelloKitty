@@ -11,104 +11,25 @@
     <script src="../js/endereco.js"></script> 
 </head>
 <body> 
-    <div class="chinelo" >
-        <div class="cordão"></div>
+
+    <table id="tabela">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>CEP</th>
+                <th>Endereço</th>
+                <th>Número</th>
+                <th>Complemento</th>
+            </tr>
+        </thead>
+        <tbody>
+            <div id="dados-api">
+        </tbody>
+    </table>
+    
+        
     </div>
-
-    <div class="header" id="topo">
-    <div class="container">
-        <div class="navbar">
-            <!--CLASSE LOGO E CHAMADA DA LOGO-->
-            <div class="logo">  
-                 <a href="#topo"><img src="img/hello-kitty-poster.png" width="60px" height="55"></a>
-                 
-            </div>
-            <!--NAVEGAÇÃO DA PÁGINA-->
-            <nav>
-                <ul>
-                    <li><a href="#em-categoria">CATEGORIAS</a></li>
-                    <li><a href="#em-destaque">DESTAQUE</a></li>
-                    <li><a href="#ultimos-produtos">ÚLTIMOS</a></li>
-                    <li><a href="#sobre">SOBRE</a></li>
-                    <li class="dropdown">
-                        <a href="html/loginEcadastro.html">CONTA</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="html/loginEcadastro.html"><i class="fa fa-sign-out-alt"></i> CONTA</a></li>
-                        </ul>
-                </ul>
-            </nav>
-            <img src="img/compra.png" width="27px" height="27px">
-        </div>
-
-   
-    <footer>
-        <div class="container" id="sobre">
-            <div class="footer-content">
-                <div class="contacts">
-                    <h3>Contatos</h3>
-                    <ul>
-                        <li>Email: timehellome@gmail.com</li>
-                        <li>Telefone: (+55) 11 955544478</li>
-                    </ul>
-                </div>
-                <div class="social-media">
-                    <h3>Redes Sociais</h3>
-                    <div class="social-media-icons">
-                        <a href="https://github.com/seu_usuario_github" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/seu_usuario_linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
-                <div class="reclame-aqui">
-                    <h3>Reclame Aqui</h3>
-                    <a href="#">Link para sua página no Reclame Aqui</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-</div>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script>
-    $(document).ready(function(){
-        $('.slider').slick({
-            slidesToShow: 3, // Quantidade de slides exibidos
-            slidesToScroll: 1, // Quantidade de slides a serem rolados
-            autoplay: true, // Auto rolamento
-            autoplaySpeed: 2000, // Velocidade do auto rolamento
-            arrows: true, // Exibir setas de navegação
-            prevArrow: '<button type="button" class="slick-prev">Previous</button>', // Personaliza a seta de navegação anterior
-            nextArrow: '<button type="button" class="slick-next">Next</button>', // Personaliza a seta de navegação seguinte
-            responsive: [
-                {
-                    breakpoint: 768, // Tamanho da tela em que o carrossel será responsivo
-                    settings: {
-                        slidesToShow: 2 // Altera a quantidade de slides exibidos em telas menores
-                    }
-                },
-                {
-                    breakpoint: 480, // Tamanho da tela em que o carrossel será responsivo
-                    settings: {
-                        slidesToShow: 1 // Altera a quantidade de slides exibidos em telas menores
-                    }
-                }
-            ]
-        });
-
-        // Adiciona o comportamento de rolagem suave aos links do menu
-        $('a[href*="#"]').on('click', function(e) {
-            e.preventDefault();
-
-            $('html, body').animate(
-                {
-                    scrollTop: $($(this).attr('href')).offset().top
-                },
-                500,
-                'linear'
-            );
-        });
-    });
-</script>
-
+        
 
 </body>
 </html>
