@@ -315,3 +315,9 @@ footer .reclame-aqui a:hover {
 .social-media-icons a:hover {
     color: #e46685ec;
 }
+
+#dados-api{
+    td, tr, table{
+        border: 1px solid black;
+    }
+  }
