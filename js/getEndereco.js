@@ -1,7 +1,6 @@
 const url = 'https://go-wash-api.onrender.com/api/auth/address';
 
 async function getEnderecoUsuario() {
-    try {
         let user = localStorage.getItem('user'); //obtém os dados do usuário armazenados no local storage do navegador.
         let token = JSON.parse(user).access_token; // analisa o JSON para extrair o token de acesso.
 
@@ -14,16 +13,13 @@ async function getEnderecoUsuario() {
         });
 
         const data = await resposta.json();
-        console.log(data);
-
+    
         if (data && data.data && data.data.length > 0) { //verifica se os dados existem e se contêm pelo menos um endereço.
             exibirDados(data.data); //para exibir os endereços na tabela.
         } else {
             console.log("Nenhum endereço encontrado.");
         }
-    } catch (error) {
-        console.error("Ocorreu um erro ao buscar os dados:", error);
-    }
+        console.log(data);
 }
 
 function exibirDados(enderecos) { //recebe uma lista de endereços e os exibe na tabela.
